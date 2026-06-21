@@ -21,7 +21,7 @@ Understanding:
 
 The current app is ECS fargate using Splunk Universal Forwarder push pattern (host side log file shipping)  
 I have a new application environment (arsqa) writing logs to var/log/arsqa/cdn-verification-service/app.log on ECS host in AWS account. 
------- 
+ 
   I have summarized my recent project work on the banking platform’s orchestration service for our webpage display:
 
   - Developed an orchestration service for a high-volume banking platform processing thousands of daily credit card applications.
