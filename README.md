@@ -3,6 +3,8 @@
 Project description: Imagine you work at a bank that process credit card applications. Everyday thousands of requests flow through a system called the orchestration service. It calls other services runs businesses rules decides whether to approve or decline the credit line increases. 
 Now imagine businesses want to add new features : co-owner merge. This let existing card holder add a co-owner to their account. The co-owner needs their own credit check, their own bureau pull, their own risk assessment. 
 
+A key challenge was ensuring that the new "Co-Owner Merge" feature, which allows merging two existing accounts into one, could be safely deployed without risking accidental bureau pulls or incorrect decisions. To achieve this, I implemented robust logic isolation and environment management strategies, allowing us to deploy from a single codebase while maintaining strict control over feature rollout.
+
 You can’t break the existing system while building the new one.The existing system BAU processes real customer requests in production. 
 If your co-owner merge code accidentally runs against a regular credit line increase request, bad things happen: wrong decisions extra bureau pull cost money 
 So how do you build a new feature alongside an existing system deploy them from sane codebase and guarantee they never interfere with each other. 
@@ -27,7 +29,6 @@ I have a new application environment (arsqa) writing logs to var/log/arsqa/cdn-v
   - Implemented the "Co-Owner Merge" feature, enabling independent credit checks and risk assessments separate from BAU credit line increase requests.
   - Ensured safe deployment via logic isolation and environment management to prevent accidental bureau pulls or incorrect decisions from a single codebase.
   - Integrated automated data publishing to Kafka and internal databases for downstream processing.
-
 
 Professional summary of a recent project I worked on, specifically framed for an upcoming interview.
 
